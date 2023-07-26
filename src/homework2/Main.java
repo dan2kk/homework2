@@ -1,9 +1,6 @@
 package homework2;
 
 import java.util.*;
-import java.util.regex.*;
-
-import static java.lang.System.out;
 
 public class Main {
     public static ArrayList<Integer> findIdx(String addr){ //로, 길에 해당하는 index 찾기, 가장 뒤에 있는 글자 부터 찾기시작
@@ -56,8 +53,8 @@ public class Main {
         SqlConn sqlconn = new SqlConn("jdbc:sqlite:Address_db.db");
         System.out.print("주소입력: (q 종료)");
         String input;
-        while((input= io.nextLine()) != "q"){
-            run(sqlconn,input);
+        while((input= io.nextLine()).equals("q")){
+            run(sqlconn, input);
         }
         sqlconn.closeDbConn();
     }

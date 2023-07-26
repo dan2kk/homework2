@@ -13,9 +13,8 @@ public class Address {
             "경기",
             "강원",
             "제주"};
-    public ArrayList<String> doroMung = new ArrayList<String>();
+    public ArrayList<String> doroMung = new ArrayList<>();
     public Address(String s){
-        int count = 0;
         s = s.replaceAll("[^가-힣A-Za-z·\\d~.]", "");
         String[] temp = s.split("도|시|군|구");
         for(String doTemp: confirmedDoName){
